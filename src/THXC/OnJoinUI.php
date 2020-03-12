@@ -23,29 +23,29 @@ use jojoe77777\FormAPI\SimpleForm;
 class OnJoinUI extends PluginBase implements Listener {
 	
 	public function onEnable()
-	{
+	{ 
         	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-        	$this->getLogger()->info("§adotDotDOT Enabled!");
+        	$this->getLogger()->info("§gPlugin Enabled: OnJoinUI §aCopyright (c) THXC 2019-2020");
         	$this->saveResource("config.yml");
  	
 		$this->FormAPI = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
         	if (!$this->FormAPI or $this->FormAPI->isDisabled())
 	{
-        	$this->getLogger()->warning("§cPlugin FormAPI not found, disabling JoinUI...");
-        	$this->getLogger()->warning("§ePlease install FormAPI - Download HERE: poggit.pmmp.io/p/FormAPI");
+        	$this->getLogger()->warning("§cPlugin FormAPI not found, disabling OnJoinUI...");
+        	$this->getLogger()->warning("§ePlease install FormAPI - Download HERE: https://poggit.pmmp.io/p/FormAPI");
         	$this->getServer()->getPluginManager()->disablePlugin($this);
         }
 	}
 	
 	public function onDisable
 	{
-		$this->getLogger()->info("§cdotDotDOT Disabled!")
+		$this->getLogger()->info("§cPlugin Disabled: OnJoinUI §aCopyright (c) THXC 2019-2020")
 	}
 		
 	public function onJoin(CommandSender $sender, PlayerJoinEvent $event)
 	{
 	if ($this->getConfig()->get("verification-ui") == "true") {
-           //$playr = $event->getPlayer();
+           //i need to do something with this $playr = $event->getPlayer();
 		$form->sendToPlayer($sender);
 	}	
 	
