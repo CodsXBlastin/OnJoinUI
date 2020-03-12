@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace THXC;
 
 use pocketmine\event\player\PlayerJoinEvent;
