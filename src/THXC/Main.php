@@ -22,7 +22,7 @@ use pocketmine\command\ConsoleCommandSender;
 use jojoe77777\FormAPI;
 use jojoe77777\FormAPI\SimpleForm;
 
-class OnJoinUI extends PluginBase implements Listener {
+class Main extends PluginBase implements Listener {
 	
 	public function onEnable()
 	{ 
