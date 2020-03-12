@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace THXC;
 
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\utils\Config;
+use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\plugin\PluginBase;
-use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat;
+use pocketmine\utils\Config;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\CommandExecutor;
