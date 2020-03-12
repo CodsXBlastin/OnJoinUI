@@ -1,0 +1,11 @@
+---
+#Here you can change the messages that will display
+#Use "§" as a color symbol
+#Use "\n" to go to the next line
+#The title of the menu
+Title: "§a§lOnJoin§bUI"
+Content: "§bWelcome to the §e§oServer§r§7! \n §7This §e§oServer§r §7is using §e§odotDotDOT! \n \n"
+verification-ui: "true" #if false the ui wont open
+#Returns button name
+Button: "§aSubmit"
+...
