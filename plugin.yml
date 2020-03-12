@@ -3,5 +3,5 @@ name: OnJoinUI
 author: THXC
 version: 0.0.1
 api: [3.0.0, 3.11.6, 4.0.0]
-main: THXC\Main
+main: THXC\main
 ...
