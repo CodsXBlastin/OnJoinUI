@@ -1,5 +1,7 @@
 <?php
 
+//I needed a extra line somewhere ¯\_(ツ)_/¯
+
 declare(strict_types=1);
 
 namespace THXC;
