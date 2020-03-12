@@ -33,8 +33,8 @@ class Main extends PluginBase implements Listener {
 		}
 	}
 	
-	public function onDisable {
-		$this->getLogger()->info("§cPlugin Disabled: OnJoinUI §aCopyright (c) THXC 2019-2020")
+	public function onDisable() {
+		$this->getLogger()->info("§cPlugin Disabled: OnJoinUI §aCopyright (c) THXC 2019-2020");
 	}
 		
 	public function onJoin(CommandSender $sender, PlayerJoinEvent $event) {
@@ -62,4 +62,3 @@ class Main extends PluginBase implements Listener {
 		return true;
 	    }
     }
-}
