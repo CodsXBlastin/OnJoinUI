@@ -1,7 +1,5 @@
 <?php
 
-//I needed a extra line somewhere ¯\_(ツ)_/¯
-
 declare(strict_types=1);
 
 namespace THXC;
@@ -18,41 +16,35 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\CommandExecutor;
 use pocketmine\command\ConsoleCommandSender;
 
-//FormAPI Stuff
 use jojoe77777\FormAPI;
 use jojoe77777\FormAPI\SimpleForm;
 
-class main extends PluginBase implements Listener {
+class Main extends PluginBase implements Listener {
 	
-	public function onEnable()
-	{ 
+	public function onEnable() { 
         	$this->getServer()->getPluginManager()->registerEvents($this, $this);
         	$this->getLogger()->info("§gPlugin Enabled: OnJoinUI §aCopyright (c) THXC 2019-2020");
         	$this->saveResource("config.yml");
  	
 		$this->FormAPI = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-        	if (!$this->FormAPI or $this->FormAPI->isDisabled())
-	{
+        	if (!$this->FormAPI or $this->FormAPI->isDisabled()) {
         	$this->getLogger()->warning("§cPlugin FormAPI not found, disabling OnJoinUI...");
         	$this->getLogger()->warning("§ePlease install FormAPI - Download HERE: https://poggit.pmmp.io/p/FormAPI");
         	$this->getServer()->getPluginManager()->disablePlugin($this);
-        }
+		}
 	}
 	
-	public function onDisable
-	{
+	public function onDisable {
 		$this->getLogger()->info("§cPlugin Disabled: OnJoinUI §aCopyright (c) THXC 2019-2020")
 	}
 		
-	public function onJoin(CommandSender $sender, PlayerJoinEvent $event)
-	{
+	public function onJoin(CommandSender $sender, PlayerJoinEvent $event) {
 	if ($this->getConfig()->get("verification-ui") == "true") {
-           //i need to do something with this $playr = $event->getPlayer();
+           //i need to do something with this $player = $event->getPlayer();
 		$form->sendToPlayer($sender);
 	}	
 	
-	public function mainFrom($player)
-	{
+	public function mainFrom($player) {
 	    $form = new SimpleForm(function (Player $player, $data){
 		$result = $data;
 		if($result === null) {
