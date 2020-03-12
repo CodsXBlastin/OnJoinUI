@@ -4,6 +4,7 @@
 #Use "\n" to go to the next line
 #The title of the menu
 Title: "§a§lOnJoin§bUI"
+#Returns description name 
 Content: "§bWelcome to the §e§oServer§r§7! \n §7This §e§oServer§r §7is using §e§oOnJoinUI! \n \n"
 verification-ui: "true" #if false the ui wont open
 #Returns button name
