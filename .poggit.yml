@@ -4,5 +4,5 @@ branches:
 - master
 projects:
   OnJoinUI:
-    path: ""
+    path: "THXC\main"
 ...
