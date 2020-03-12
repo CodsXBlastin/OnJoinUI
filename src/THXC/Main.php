@@ -41,10 +41,11 @@ class Main extends PluginBase implements Listener {
 	if ($this->getConfig()->get("verification-ui") == "true") {
            //i need to do something with this $player = $event->getPlayer();
 		$form->sendToPlayer($sender);
-	}	
+    }
+}	
 	
 	public function mainFrom($player) {
-	    $form = new SimpleForm(function (Player $player, $data){
+	    $form = new SimpleForm(function (Player $player, $data) {
 		$result = $data;
 		if($result === null) {
 		   return true;
@@ -59,6 +60,6 @@ class Main extends PluginBase implements Listener {
 		$form->addButton($this->getConfig()->get("Button"));
 		$form->sendToPlayer($sender);
 		return true;
-	}
-}
+	    }
+    }
 }
