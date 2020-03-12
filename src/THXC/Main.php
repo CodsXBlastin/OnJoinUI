@@ -27,7 +27,6 @@ class Main extends PluginBase implements Listener {
         	if (!$this->FormAPI or $this->FormAPI->isDisabled()) {
         	$this->getLogger()->warning("§cPlugin FormAPI not found, disabling OnJoinUI...");
         	$this->getLogger()->warning("§ePlease install FormAPI - Download HERE: https://poggit.pmmp.io/p/FormAPI");
-        	$this->getServer()->getPluginManager()->disablePlugin($this);
 		}
 	}
 	
